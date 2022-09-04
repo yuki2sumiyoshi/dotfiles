@@ -1,0 +1,48 @@
+let g:coc_global_extensions = [
+    \'coc-css',
+    \'coc-eslint',
+    \'coc-html',
+    \'coc-json',
+    \'coc-prettier',
+    \'coc-tsserver',
+    \'coc-vetur',
+    \'coc-vimlsp',
+    \'coc-clangd',
+\]
+
+call plug#begin('~/.vim/plugged')
+    Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+    Plug 'rafi/awesome-vim-colorschemes'
+    Plug 'flazz/vim-colorschemes'
+    Plug 'whatyouhide/vim-gotham'
+    Plug 'scrooloose/nerdtree'
+        Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+    Plug 'vim-jp/vimdoc-ja'
+    Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+        Plug 'thinca/vim-quickrun'
+            Plug 'osyo-manga/shabadou.vim'
+    Plug 'tpope/vim-surround'
+    Plug 'tomtom/tcomment_vim'
+    Plug 'skanehira/translate.vim'
+    Plug 'lithammer/vim-eighties'
+call plug#end()
+
+filetype plugin indent on
+
+let g:NERDTreeLinitedSyntax = 1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeChDirMode = 2
+let g:NERDTreeBookmarksFile = "$HOME/.vim"
+
+setlocal iskeyword+=$
+setlocal iskeyword+=-
+
+runtime! vimrc.d/*.vim
+
+augroup start
+    autocmd!
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+    autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'cd '.argv()[0] | exe 'NERDTree' argv()[0] | wincmd p | ene | NERDTreeFocus | endif
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+augroup END

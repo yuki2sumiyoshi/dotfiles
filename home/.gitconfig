@@ -1,0 +1,10 @@
+[user]
+	name = Yuki Sumiyoshi
+	email = smysyuk@gmail.com
+[core]
+	editor = vim
+[color]
+	ui = true
+[credential]
+	helper = store
+	UseHttpPath = true
