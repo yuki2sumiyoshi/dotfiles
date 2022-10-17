@@ -19,12 +19,12 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'neoclide/coc.nvim', { 'branch': 'release' }
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
         Plug 'junegunn/fzf.vim'
-        " Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/remote', 'do': ':UpdateRemotePlugins' }
+        Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/remote', 'do': ':UpdateRemotePlugins' }
     Plug 'rafi/awesome-vim-colorschemes'
     Plug 'flazz/vim-colorschemes'
     Plug 'lithammer/vim-eighties'
     Plug 'whatyouhide/vim-gotham'
-    Plug 'ryanoasis/vim-devicons'
+    " Plug 'ryanoasis/vim-devicons'
     Plug 'scrooloose/nerdtree'
         Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     Plug 'vim-jp/vimdoc-ja'
@@ -44,6 +44,7 @@ let g:NERDTreeChDirMode = 2
 let g:NERDTreeBookmarksFile = "$HOME/.vim"
 
 runtime! nvimrc.d/*.vim
+" runtime! nvimrc.d/coc.vim
 
 " augroup start
 "     autocmd!

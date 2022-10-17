@@ -1,3 +1,5 @@
+let mapleader = "\<Space>"                 " キーマップリーダー
+
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: There's always complete item selected by default, you may want to enable
 " no select by `"suggest.noselect": true` in your configuration file.

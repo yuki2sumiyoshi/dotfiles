@@ -3,8 +3,19 @@
     "suggest.enablePreview": true,
     "suggest.floatEnable": true,
     "suggest.numberSelect": true,
+
     "coc.preferences.extensionUpdateCheck": "never",
-    "coc.preferences.formatOnSaveFiletypes": ["typescript", "css", "markdown"],
+    "coc.preferences.formatOnTypeFiletypes": [
+        "tsx",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+
+    "prettier.enable": true,
+    "prettier.requireConfig": true,
+
     "eslint.probe": ["javascriptreact", "javascript", "typescriptreact", "typescript", "vue"],
     "eslint.autoFixOnSave": true,
     "languageserver": {
