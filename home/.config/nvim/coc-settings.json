@@ -5,8 +5,9 @@
     "suggest.numberSelect": true,
 
     "coc.preferences.extensionUpdateCheck": "never",
-    "coc.preferences.formatOnTypeFiletypes": [
-        "tsx",
+    "coc.preferences.formatOnSaveFiletypes": [
+        "html",
+        "css",
         "javascript",
         "javascriptreact",
         "typescript",
@@ -14,7 +15,7 @@
     ],
 
     "prettier.enable": true,
-    "prettier.requireConfig": true,
+    "prettier.requireConfig": false,
 
     "eslint.probe": ["javascriptreact", "javascript", "typescriptreact", "typescript", "vue"],
     "eslint.autoFixOnSave": true,

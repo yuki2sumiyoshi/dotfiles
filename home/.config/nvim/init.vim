@@ -34,6 +34,8 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'tpope/vim-surround'
     Plug 'tomtom/tcomment_vim'
     Plug 'skanehira/translate.vim'
+    Plug 'editorconfig/editorconfig-vim'
+
 call plug#end()
 
 filetype plugin indent on
