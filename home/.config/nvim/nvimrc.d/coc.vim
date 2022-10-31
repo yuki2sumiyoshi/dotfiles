@@ -16,8 +16,8 @@ inoremap <silent><expr> <C-p>
 inoremap <silent><expr> <C-n>
             \ coc#pum#visible() ? coc#pum#next(1) : coc#refresh()
 
-inoremap <silent><expr> <C-u>
-            \ coc#pum#visible() ? coc#pum#cancel() : "\<C-u>"
+" inoremap <silent><expr> <C-u>
+"             \ coc#pum#visible() ? coc#pum#cancel() : "\<C-u>"
 
 " カーソルの直前に文字が無ければ true
 function! CheckBackspace() abort
