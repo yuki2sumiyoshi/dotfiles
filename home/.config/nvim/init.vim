@@ -13,6 +13,8 @@ let g:coc_global_extensions = [
     \'coc-vimlsp',
     \'coc-clangd',
     \'coc-lists',
+    \'coc-swagger',
+    \'coc-spell-checker',
 \]
 
 call plug#begin('~/.local/share/nvim/plugged')

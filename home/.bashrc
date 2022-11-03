@@ -149,3 +149,7 @@ if [ -n "$MY_TMUX_AUTOSTART" ] && [ "$MY_TMUX_AUTOSTART" -eq 1 ]; then
   tmux_autostart
   unset tmux_autostart
 fi
+
+if [ -d "$HOME/.porters.bashrc" ] ; then
+  . "$HOME/.porters.bashrc"
+fi
