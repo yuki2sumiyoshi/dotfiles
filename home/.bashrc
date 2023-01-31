@@ -120,8 +120,8 @@ if type "kubectl" > /dev/null 2>&1; then
   source <(kubectl completion bash)
 fi
 
-if [ -f ~/.anyenv/envs/pyenv/shims/aws_completer ]; then
-  complete -C '~/.anyenv/envs/pyenv/shims/aws_completer' aws
+if type "aws_completer" > /dev/null 2>&1; then
+  complete -C 'aws_completer' aws
 fi
 
 if type "/usr/bin/terraform" > /dev/null 2>&1; then
@@ -150,6 +150,7 @@ if [ -n "$MY_TMUX_AUTOSTART" ] && [ "$MY_TMUX_AUTOSTART" -eq 1 ]; then
   unset tmux_autostart
 fi
 
-if [ -d "$HOME/.porters.bashrc" ] ; then
-  . "$HOME/.porters.bashrc"
-fi
+# if [ -f "$HOME/.porters.bashrc" ] ; then
+#   . "$HOME/.porters.bashrc"
+# fi
+# . "$HOME/.cargo/env"

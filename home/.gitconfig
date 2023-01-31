@@ -1,10 +1,25 @@
 [user]
-	name = Yuki Sumiyoshi
-	email = smysyuk@gmail.com
+    name = Yuki Sumiyoshi
+    email = smysyuk@gmail.com
 [core]
-	editor = vim
+    editor = nvim
 [color]
-	ui = true
+    ui = true
 [credential]
-	helper = store
-	UseHttpPath = true
+    helper = store
+    UseHttpPath = true
+[diff]
+    tool = vimdiff
+[difftool "vimdiff"]
+    cmd = "nvim -R -d -c \"wincmd l\" -d \"$LOCAL\" \"$REMOTE\""
+[merge]
+    tool = vimdiff
+[mergetool]
+    keepBackup = false
+[mergetool "vimdiff"]
+    cmd = "nvim -d -c \"4wincmd w | wincmd J\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"  \"$MERGED\""
+    # cmd = "nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'"
+[rerere]
+    enable = true
+[cola]
+	spellcheck = false

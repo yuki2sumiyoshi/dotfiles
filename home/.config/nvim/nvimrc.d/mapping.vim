@@ -10,8 +10,8 @@ nnoremap <F2> :NERDTreeToggle<CR>
 nnoremap <Leader>f :NERDTreeToggle<CR>
 
 " QuickRun
-nnoremap <F5> :QuickRun -mode n<CR>
-vnoremap <F5> :QuickRun -mode v<CR>
+" nnoremap <F5> :QuickRun -mode n<CR>
+" vnoremap <F5> :QuickRun -mode v<CR>
 noremap <Leader>q :QuickRun -mode n<CR>
 vnoremap <Leader>q :QuickRun -mode v<CR>
 
@@ -23,6 +23,9 @@ tnoremap <silent> <ESC> <C-\><C-n>
 
 "translate
 vmap <Leader>h <Plug>(VTranslate)
+
+"rest-client
+vmap <Leader>r :CocCommand rest-client.request <cr>
 
 noremap <Leader>y "*y
 noremap <Leader>Y "*Y
