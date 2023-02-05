@@ -1,0 +1,10 @@
+#!/bin/bash
+
+git_info=""
+
+if git_status=$(cd $1 && git status 2>/dev/null ); then
+    git_branch=$(cd $1 && git rev-parse --abbrev-ref HEAD)
+    git_info="  ${git_branch}"
+fi
+
+echo "$git_info"
